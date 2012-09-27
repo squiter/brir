@@ -19,7 +19,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+	require 'brir'
+	
+	# chose  the exercise year or leave blank to use actual year
+	brir = Brir.new 2012
+	
+	# call tax method passing your taxable income
+	income_tax_value = brir.tax 42000
+	
+	puts income_tax_value
+	#=> 3109.53 
 
 ## Contributing
 
