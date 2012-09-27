@@ -1,6 +1,7 @@
 # Brir
 
-TODO: Write a gem description
+Brir is a interface to calculate the Brazilian Income Tax (Imposto de Renda Brasileiro - IRPF & IRPJ).  
+This gem was created to solve a unique issue that is calculate how many money the brazilians will pay to your country over your anual income.
 
 ## Installation
 
