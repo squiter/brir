@@ -3,9 +3,9 @@ require File.expand_path('../lib/brir/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Brunno dos Santos"]
-  gem.email         = ["squiter85@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["brunno@brunno.me"]
+  gem.description   = %q{Brir provide a interface to calculate Brazilian Icome Taxes (IRPF and IRPJ)}
+  gem.summary       = %q{Calculate Brazilian Icome Taxes}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
