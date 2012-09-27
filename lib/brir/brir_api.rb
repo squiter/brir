@@ -53,7 +53,11 @@ module Brir
       yaml = YAML.load_file(File.join(File.dirname(__FILE__),"table_source/progressiveTable.yml"))
       begin
         yaml[exercise_year]["ranges"]
+      rescue Errno::ENOENT
+        log(:warning, "ProgressiveTable.yml not found.")
+        nil
       rescue Exception => e
+        log(:warning, "The progressiveTable.yml do not have the exercise year that you want.")
         nil
       end
     end
