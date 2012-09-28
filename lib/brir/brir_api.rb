@@ -11,6 +11,7 @@ module Brir
     def tax(income)
       
       # prevent negative incomes
+      income = income.to_f.round 2
       return 0.00 unless income > 0
       
       case income
@@ -47,17 +48,28 @@ module Brir
     end
     
     private
-    def table(exercise_year)
+    def set_progressive_table()
       require 'yaml'
-      # TODO How is the best way to load this file?
-      yaml = YAML.load_file(File.join(File.dirname(__FILE__),"table_source/progressiveTable.yml"))
+      
+      begin
+        # Trying to get brir.yml into config path, for Rails Applications
+        file = File.join(Rails.root, "config", "brir.yml")
+      rescue
+        file = File.join(File.dirname(__FILE__),"table_source/progressiveTable.yml")
+      end
+      
+      begin
+        yaml = YAML.load_file(file)
+      rescue Errno::ENOENT
+        puts "Fails"
+      end
+    end
+    
+    def table(exercise_year)
+      yaml = set_progressive_table()
       begin
         yaml[exercise_year]["ranges"]
-      rescue Errno::ENOENT
-        log(:warning, "ProgressiveTable.yml not found.")
-        nil
       rescue Exception => e
-        log(:warning, "The progressiveTable.yml do not have the exercise year that you want.")
         nil
       end
     end
