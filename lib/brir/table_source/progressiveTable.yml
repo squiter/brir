@@ -52,3 +52,57 @@
       to:
       aliquot: 27.5
       portion: 9078.38
+2014:
+  ranges:
+    first:
+      from: 0
+      to: 20529.36
+      aliquot:
+      portion: 0
+    second:
+      from: 20529.37
+      to: 30766.92
+      aliquot: 7.5
+      portion: 1539.70
+    third:
+      from: 30766.93
+      to: 41023.08
+      aliquot: 15
+      portion: 3847.22
+    fourth:
+      from: 41023.09
+      to: 51259.08
+      aliquot: 22.5
+      portion: 6923.95
+    fifth:
+      from: 51259.08
+      to:
+      aliquot: 27.5
+      portion: 9486.91
+2015:
+  ranges:
+    first:
+      from: 0
+      to: 21453.24
+      aliquot:
+      portion: 0
+    second:
+      from: 21453.25
+      to: 32151.48
+      aliquot: 7.5
+      portion: 1608.99
+    third:
+      from: 32151.49
+      to: 42869.16
+      aliquot: 15
+      portion: 4020.35
+    fourth:
+      from: 42869.17
+      to: 53565.72
+      aliquot: 22.5
+      portion: 7235.54
+    fifth:
+      from: 53564.72
+      to:
+      aliquot: 27.5
+      portion: 9913.83
