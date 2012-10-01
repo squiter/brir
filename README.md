@@ -1,6 +1,8 @@
 # Brir
 
-Brir is a interface to calculate the Brazilian Income Tax (Imposto de Renda Brasileiro - IRPF & IRPJ).  
+[![Build Status](https://secure.travis-ci.org/squiter85/brir.png)](http://travis-ci.org/squiter85/brir)
+
+Brir is a interface to calculate the Brazilian Income Tax (Imposto de Renda Brasileiro - IRPF & IRPJ).
 This gem was created to solve a unique issue that is calculate how many money the brazilians will pay to your country over your anual income.
 
 ## Installation
@@ -20,27 +22,27 @@ Or install it yourself as:
 ## Usage
 
 	require 'brir'
-	
+
 	# chose  the exercise year or leave blank to use actual year
 	brir = Brir.new 2012
-	
+
 	# call tax method passing your taxable income
 	income_tax_value = brir.tax 42000
-	
+
 	puts income_tax_value
-	#=> 3109.53 
+	#=> 3109.53
 
 ## Progressive Table
 
-This gem already have a progressive table with the following exercise years (Financial Year):  
+This gem already have a progressive table with the following exercise years (Financial Year):
 
-* 2012  
-* 2013  
-* 2014  
+* 2012
+* 2013
+* 2014
 * 2015
 
-If you want to use your own Progressive Table, you must to create a YAML file into your config path. (Only for Rails Applications).  
-The file must be like these:  
+If you want to use your own Progressive Table, you must to create a YAML file into your config path. (Only for Rails Applications).
+The file must be like these:
 
 	2012:
 	  ranges:
