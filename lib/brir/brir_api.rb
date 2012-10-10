@@ -6,6 +6,7 @@ module Brir
       @exercise_year = (exercise_year.nil?) ? Time.new.year : exercise_year
       @calendar_year = @exercise_year.to_i - 1
       @ranges = table(@exercise_year)
+      raise "Fail to initialize the progressive table" if @ranges.nil?
     end
 
     def tax(income)
