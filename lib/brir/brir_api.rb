@@ -37,14 +37,19 @@ module Brir
       begin
         # Trying to get brir.yml into config path, for Rails Applications
         file = File.join(Rails.root, "config", "brir.yml")
+
+        # I realy don't know if this is the best solution to this
+        unless File.exists? file
+          file = File.join(File.dirname(__FILE__),"table_source", "progressiveTable.yml")
+        end
       rescue
-        file = File.join(File.dirname(__FILE__),"table_source/progressiveTable.yml")
+        file = File.join(File.dirname(__FILE__),"table_source", "progressiveTable.yml")
       end
 
       begin
         yaml = YAML.load_file(file)
       rescue Errno::ENOENT
-        puts "Fails"
+        raise "Brir fails to load progressive table"
       end
     end
 
